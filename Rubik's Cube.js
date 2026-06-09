@@ -517,7 +517,7 @@ class faces {
 	}
 
 	DrawQuad(Sides, Colour) {
-		if (Number.isFinite(Sides[0]) || Number.isFinite(Sides[1]) || Number.isFinite(Sides[2]) || Number.isFinite(Sides[3]) || Number.isFinite(Sides[4]) || Number.isFinite(Sides[5]) || Number.isFinite(Sides[6]) || Number.isFinite(Sides[7])) return;
+		if (!(Number.isFinite(Sides[0]) || Number.isFinite(Sides[1]) || Number.isFinite(Sides[2]) || Number.isFinite(Sides[3]) || Number.isFinite(Sides[4]) || Number.isFinite(Sides[5]) || Number.isFinite(Sides[6]) || Number.isFinite(Sides[7]))) return;
 		ctx.fillStyle = Colour;
 		ctx.strokeStyle = "black";
 		ctx.lineWidth = 2;
