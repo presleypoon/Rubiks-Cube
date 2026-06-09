@@ -230,283 +230,240 @@ class faces {
 
 	TurnF() {
 		let temp = [];
-		temp = [this.L[8], this.L[5], this.L[2], this.D[0], this.D[1], this.D[2], this.R[6], this.R[3], this.R[0], this.U[8], this.U[7], this.U[6]];
+		temp = [
+			this.L[8], this.L[5], this.L[2],
+			this.D[0], this.D[1], this.D[2],
+			this.R[0], this.R[3], this.R[6],
+			this.U[8], this.U[7], this.U[6]
+		];
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
-		this.L[8] = temp[0];
-		this.L[5] = temp[1];
-		this.L[2] = temp[2];
-		this.D[0] = temp[3];
-		this.D[1] = temp[4];
-		this.D[2] = temp[5];
-		this.R[6] = temp[6];
-		this.R[3] = temp[7];
-		this.R[0] = temp[8];
-		this.U[8] = temp[9];
-		this.U[7] = temp[10];
-		this.U[6] = temp[11];
-		temp = [this.F[0], this.F[1], this.F[2], this.F[5], this.F[8], this.F[7], this.F[6], this.F[3]];
+		this.L[8] = temp[0]; this.L[5] = temp[1]; this.L[2] = temp[2];
+		this.D[0] = temp[3]; this.D[1] = temp[4]; this.D[2] = temp[5];
+		this.R[6] = temp[6]; this.R[3] = temp[7]; this.R[0] = temp[8];
+		this.U[8] = temp[9]; this.U[7] = temp[10]; this.U[6] = temp[11];
+
+		temp = [
+			this.F[0], this.F[1], this.F[2], this.F[5],
+			this.F[8], this.F[7], this.F[6], this.F[3]
+		];
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
-		this.F[0] = temp[0];
-		this.F[1] = temp[1];
-		this.F[2] = temp[2];
-		this.F[5] = temp[3];
-		this.F[8] = temp[4];
-		this.F[7] = temp[5];
-		this.F[6] = temp[6];
-		this.F[3] = temp[7];
+		this.F[0] = temp[0]; this.F[1] = temp[1]; this.F[2] = temp[2]; this.F[5] = temp[3];
+		this.F[8] = temp[4]; this.F[7] = temp[5]; this.F[6] = temp[6]; this.F[3] = temp[7];
 	}
 
 	TurnU() {
 		let temp = [];
-		temp = [this.L[0], this.L[1], this.L[2], this.F[0], this.F[1], this.F[2], this.R[0], this.R[1], this.R[2], this.B[0], this.B[1], this.B[2]];
+		temp = [
+			this.L[0], this.L[1], this.L[2],
+			this.F[0], this.F[1], this.F[2],
+			this.R[0], this.R[1], this.R[2],
+			this.B[0], this.B[1], this.B[2]
+		];
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
-		this.L[0] = temp[0];
-		this.L[1] = temp[1];
-		this.L[2] = temp[2];
-		this.F[0] = temp[3];
-		this.F[1] = temp[4];
-		this.F[2] = temp[5];
-		this.R[0] = temp[6];
-		this.R[1] = temp[7];
-		this.R[2] = temp[8];
-		this.B[0] = temp[9];
-		this.B[1] = temp[10];
-		this.B[2] = temp[11];
-		temp = [this.U[0], this.U[3], this.U[6], this.U[7], this.U[8], this.U[5], this.U[2], this.U[1]];
+		this.L[0] = temp[0]; this.L[1] = temp[1]; this.L[2] = temp[2];
+		this.F[0] = temp[3]; this.F[1] = temp[4]; this.F[2] = temp[5];
+		this.R[0] = temp[6]; this.R[1] = temp[7]; this.R[2] = temp[8];
+		this.B[0] = temp[9]; this.B[1] = temp[10]; this.B[2] = temp[11];
+
+		temp = [
+			this.U[0], this.U[3], this.U[6], this.U[7],
+			this.U[8], this.U[5], this.U[2], this.U[1]
+		];
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
-		this.U[0] = temp[0];
-		this.U[3] = temp[1];
-		this.U[6] = temp[2];
-		this.U[7] = temp[3];
-		this.U[8] = temp[4];
-		this.U[5] = temp[5];
-		this.U[2] = temp[6];
-		this.U[1] = temp[7];
+		this.U[0] = temp[0]; this.U[3] = temp[1]; this.U[6] = temp[2]; this.U[7] = temp[3];
+		this.U[8] = temp[4]; this.U[5] = temp[5]; this.U[2] = temp[6]; this.U[1] = temp[7];
 	}
 
 	TurnX() {
-		let temp = [this.U[2], this.U[5], this.U[8], this.F[2], this.F[5], this.F[8], this.D[2], this.D[5], this.D[8], this.B[6], this.B[3], this.B[0]];
+		let temp = [
+			this.U[2], this.U[5], this.U[8],
+			this.F[2], this.F[5], this.F[8],
+			this.D[2], this.D[5], this.D[8],
+			this.B[6], this.B[3], this.B[0]
+		];
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
-		this.U[2] = temp[0];
-		this.U[5] = temp[1];
-		this.U[8] = temp[2];
-		this.F[2] = temp[3];
-		this.F[5] = temp[4];
-		this.F[8] = temp[5];
-		this.D[2] = temp[6];
-		this.D[5] = temp[7];
-		this.D[8] = temp[8];
-		this.B[6] = temp[9];
-		this.B[3] = temp[10];
-		this.B[0] = temp[11];
-		temp = [this.U[1], this.U[4], this.U[7], this.F[1], this.F[4], this.F[7], this.D[1], this.D[4], this.D[7], this.B[7], this.B[4], this.B[1]];
+		this.U[2] = temp[0]; this.U[5] = temp[1]; this.U[8] = temp[2];
+		this.F[2] = temp[3]; this.F[5] = temp[4]; this.F[8] = temp[5];
+		this.D[2] = temp[6]; this.D[5] = temp[7]; this.D[8] = temp[8];
+		this.B[6] = temp[9]; this.B[3] = temp[10]; this.B[0] = temp[11];
+
+		temp = [
+			this.U[1], this.U[4], this.U[7],
+			this.F[1], this.F[4], this.F[7],
+			this.D[1], this.D[4], this.D[7],
+			this.B[7], this.B[4], this.B[1]
+		];
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
-		this.U[1] = temp[0];
-		this.U[4] = temp[1];
-		this.U[7] = temp[2];
-		this.F[1] = temp[3];
-		this.F[4] = temp[4];
-		this.F[7] = temp[5];
-		this.D[1] = temp[6];
-		this.D[4] = temp[7];
-		this.D[7] = temp[8];
-		this.B[7] = temp[9];
-		this.B[4] = temp[10];
-		this.B[1] = temp[11];
-		temp = [this.U[0], this.U[3], this.U[6], this.F[0], this.F[3], this.F[6], this.D[0], this.D[3], this.D[6], this.B[8], this.B[5], this.B[2]];
+		this.U[1] = temp[0]; this.U[4] = temp[1]; this.U[7] = temp[2];
+		this.F[1] = temp[3]; this.F[4] = temp[4]; this.F[7] = temp[5];
+		this.D[1] = temp[6]; this.D[4] = temp[7]; this.D[7] = temp[8];
+		this.B[7] = temp[9]; this.B[4] = temp[10]; this.B[1] = temp[11];
+
+		temp = [
+			this.U[0], this.U[3], this.U[6],
+			this.F[0], this.F[3], this.F[6],
+			this.D[0], this.D[3], this.D[6],
+			this.B[8], this.B[5], this.B[2]
+		];
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
-		this.U[0] = temp[0];
-		this.U[3] = temp[1];
-		this.U[6] = temp[2];
-		this.F[0] = temp[3];
-		this.F[3] = temp[4];
-		this.F[6] = temp[5];
-		this.D[0] = temp[6];
-		this.D[3] = temp[7];
-		this.D[6] = temp[8];
-		this.B[8] = temp[9];
-		this.B[5] = temp[10];
-		this.B[2] = temp[11];
-		temp = [this.R[0], this.R[3], this.R[6], this.R[7], this.R[8], this.R[5], this.R[2], this.R[1]];
+		this.U[0] = temp[0]; this.U[3] = temp[1]; this.U[6] = temp[2];
+		this.F[0] = temp[3]; this.F[3] = temp[4]; this.F[6] = temp[5];
+		this.D[0] = temp[6]; this.D[3] = temp[7]; this.D[6] = temp[8];
+		this.B[8] = temp[9]; this.B[5] = temp[10]; this.B[2] = temp[11];
+
+		temp = [
+			this.R[0], this.R[3], this.R[6], this.R[7],
+			this.R[8], this.R[5], this.R[2], this.R[1]
+		];
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
-		this.R[0] = temp[0];
-		this.R[3] = temp[1];
-		this.R[6] = temp[2];
-		this.R[7] = temp[3];
-		this.R[8] = temp[4];
-		this.R[5] = temp[5];
-		this.R[2] = temp[6];
-		this.R[1] = temp[7];
-		temp = [this.L[0], this.L[1], this.L[2], this.L[5], this.L[8], this.L[7], this.L[6], this.L[3]];
+		this.R[0] = temp[0]; this.R[3] = temp[1]; this.R[6] = temp[2]; this.R[7] = temp[3];
+		this.R[8] = temp[4]; this.R[5] = temp[5]; this.R[2] = temp[6]; this.R[1] = temp[7];
+
+		temp = [
+			this.L[0], this.L[1], this.L[2], this.L[5],
+			this.L[8], this.L[7], this.L[6], this.L[3]
+		];
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
-		this.L[0] = temp[0];
-		this.L[1] = temp[1];
-		this.L[2] = temp[2];
-		this.L[5] = temp[3];
-		this.L[8] = temp[4];
-		this.L[7] = temp[5];
-		this.L[6] = temp[6];
-		this.L[3] = temp[7];
+		this.L[0] = temp[0]; this.L[1] = temp[1]; this.L[2] = temp[2]; this.L[5] = temp[3];
+		this.L[8] = temp[4]; this.L[7] = temp[5]; this.L[6] = temp[6]; this.L[3] = temp[7];
 	}
 
 	TurnY() {
-		let temp = [this.F[0], this.F[1], this.F[2], this.R[0], this.R[1], this.R[2], this.B[0], this.B[1], this.B[2], this.L[0], this.L[1], this.L[2]];
+		let temp = [
+			this.F[0], this.F[1], this.F[2],
+			this.R[0], this.R[1], this.R[2],
+			this.B[0], this.B[1], this.B[2],
+			this.L[0], this.L[1], this.L[2]
+		];
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
-		this.F[0] = temp[0];
-		this.F[1] = temp[1];
-		this.F[2] = temp[2];
-		this.R[0] = temp[3];
-		this.R[1] = temp[4];
-		this.R[2] = temp[5];
-		this.B[0] = temp[6];
-		this.B[1] = temp[7];
-		this.B[2] = temp[8];
-		this.L[0] = temp[9];
-		this.L[1] = temp[10];
-		this.L[2] = temp[11];
-		temp = [this.F[3], this.F[4], this.F[5], this.R[3], this.R[4], this.R[5], this.B[3], this.B[4], this.B[5], this.L[3], this.L[4], this.L[5]];
+		this.F[0] = temp[0]; this.F[1] = temp[1]; this.F[2] = temp[2];
+		this.R[0] = temp[3]; this.R[1] = temp[4]; this.R[2] = temp[5];
+		this.B[0] = temp[6]; this.B[1] = temp[7]; this.B[2] = temp[8];
+		this.L[0] = temp[9]; this.L[1] = temp[10]; this.L[2] = temp[11];
+
+		temp = [
+			this.F[3], this.F[4], this.F[5],
+			this.R[3], this.R[4], this.R[5],
+			this.B[3], this.B[4], this.B[5],
+			this.L[3], this.L[4], this.L[5]
+		];
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
-		this.F[3] = temp[0];
-		this.F[4] = temp[1];
-		this.F[5] = temp[2];
-		this.R[3] = temp[3];
-		this.R[4] = temp[4];
-		this.R[5] = temp[5];
-		this.B[3] = temp[6];
-		this.B[4] = temp[7];
-		this.B[5] = temp[8];
-		this.L[3] = temp[9];
-		this.L[4] = temp[10];
-		this.L[5] = temp[11];
-		temp = [this.F[6], this.F[7], this.F[8], this.R[6], this.R[7], this.R[8], this.B[6], this.B[7], this.B[8], this.L[6], this.L[7], this.L[8]];
+		this.F[3] = temp[0]; this.F[4] = temp[1]; this.F[5] = temp[2];
+		this.R[3] = temp[3]; this.R[4] = temp[4]; this.R[5] = temp[5];
+		this.B[3] = temp[6]; this.B[4] = temp[7]; this.B[5] = temp[8];
+		this.L[3] = temp[9]; this.L[4] = temp[10]; this.L[5] = temp[11];
+
+		temp = [
+			this.F[6], this.F[7], this.F[8],
+			this.R[6], this.R[7], this.R[8],
+			this.B[6], this.B[7], this.B[8],
+			this.L[6], this.L[7], this.L[8]
+		];
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
-		this.F[6] = temp[0];
-		this.F[7] = temp[1];
-		this.F[8] = temp[2];
-		this.R[6] = temp[3];
-		this.R[7] = temp[4];
-		this.R[8] = temp[5];
-		this.B[6] = temp[6];
-		this.B[8] = temp[8];
-		this.L[6] = temp[9];
-		this.L[7] = temp[10];
-		this.L[8] = temp[11];
-		temp = [this.U[0], this.U[3], this.U[6], this.U[7], this.U[8], this.U[5], this.U[2], this.U[1]];
+		this.F[6] = temp[0]; this.F[7] = temp[1]; this.F[8] = temp[2];
+		this.R[6] = temp[3]; this.R[7] = temp[4]; this.R[8] = temp[5];
+		this.B[6] = temp[6]; this.B[7] = temp[7]; this.B[8] = temp[8];
+		this.L[6] = temp[9]; this.L[7] = temp[10]; this.L[8] = temp[11];
+
+		temp = [
+			this.U[0], this.U[3], this.U[6], this.U[7],
+			this.U[8], this.U[5], this.U[2], this.U[1]
+		];
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
-		this.U[0] = temp[0];
-		this.U[3] = temp[1];
-		this.U[6] = temp[2];
-		this.U[7] = temp[3];
-		this.U[8] = temp[4];
-		this.U[5] = temp[5];
-		this.U[2] = temp[6];
-		this.U[1] = temp[7];
-		temp = [this.D[0], this.D[1], this.D[2], this.D[5], this.D[8], this.D[7], this.D[6], this.D[3]];
+		this.U[0] = temp[0]; this.U[3] = temp[1]; this.U[6] = temp[2]; this.U[7] = temp[3];
+		this.U[8] = temp[4]; this.U[5] = temp[5]; this.U[2] = temp[6]; this.U[1] = temp[7];
+
+		temp = [
+			this.D[0], this.D[1], this.D[2], this.D[5],
+			this.D[8], this.D[7], this.D[6], this.D[3]
+		];
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
-		this.D[0] = temp[0];
-		this.D[1] = temp[1];
-		this.D[2] = temp[2];
-		this.D[5] = temp[3];
-		this.D[8] = temp[4];
-		this.D[7] = temp[5];
-		this.D[6] = temp[6];
-		this.D[3] = temp[7];
+		this.D[0] = temp[0]; this.D[1] = temp[1]; this.D[2] = temp[2]; this.D[5] = temp[3];
+		this.D[8] = temp[4]; this.D[7] = temp[5]; this.D[6] = temp[6]; this.D[3] = temp[7];
 	}
 
 	TurnZ() {
-		let temp = [this.U[2], this.U[1], this.U[0], this.L[0], this.L[3], this.L[6], this.D[6], this.D[7], this.D[8], this.R[8], this.R[5], this.R[2]];
+		let temp = [
+			this.U[2], this.U[1], this.U[0],
+			this.L[0], this.L[3], this.L[6],
+			this.D[6], this.D[7], this.D[8],
+			this.R[8], this.R[5], this.R[2]
+		];
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
-		this.U[2] = temp[0];
-		this.U[1] = temp[1];
-		this.U[0] = temp[2];
-		this.L[0] = temp[3];
-		this.L[3] = temp[4];
-		this.L[6] = temp[5];
-		this.D[6] = temp[6];
-		this.D[7] = temp[7];
-		this.D[8] = temp[8];
-		this.R[8] = temp[9];
-		this.R[5] = temp[10];
-		this.R[2] = temp[11];
-		temp = [this.U[5], this.U[4], this.U[3], this.L[1], this.L[4], this.L[7], this.D[3], this.D[4], this.D[5], this.R[7], this.R[4], this.R[1]];
+		this.U[2] = temp[0]; this.U[1] = temp[1]; this.U[0] = temp[2];
+		this.L[0] = temp[3]; this.L[3] = temp[4]; this.L[6] = temp[5];
+		this.D[6] = temp[6]; this.D[7] = temp[7]; this.D[8] = temp[8];
+		this.R[8] = temp[9]; this.R[5] = temp[10]; this.R[2] = temp[11];
+
+		temp = [
+			this.U[5], this.U[4], this.U[3],
+			this.L[1], this.L[4], this.L[7],
+			this.D[3], this.D[4], this.D[5],
+			this.R[7], this.R[4], this.R[1]
+		];
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
-		this.U[5] = temp[0];
-		this.U[4] = temp[1];
-		this.U[3] = temp[2];
-		this.L[1] = temp[3];
-		this.L[4] = temp[4];
-		this.L[7] = temp[5];
-		this.D[3] = temp[6];
-		this.D[4] = temp[7];
-		this.D[5] = temp[8];
-		this.R[7] = temp[9];
-		this.R[4] = temp[10];
-		this.R[1] = temp[11];
-		temp = [this.U[8], this.U[7], this.U[6], this.L[2], this.L[5], this.L[8], this.D[0], this.D[1], this.D[2], this.R[6], this.R[3], this.R[0]];
+		this.U[5] = temp[0]; this.U[4] = temp[1]; this.U[3] = temp[2];
+		this.L[1] = temp[3]; this.L[4] = temp[4]; this.L[7] = temp[5];
+		this.D[3] = temp[6]; this.D[4] = temp[7]; this.D[5] = temp[8];
+		this.R[7] = temp[9]; this.R[4] = temp[10]; this.R[1] = temp[11];
+
+		temp = [
+			this.U[8], this.U[7], this.U[6],
+			this.L[2], this.L[5], this.L[8],
+			this.D[0], this.D[1], this.D[2],
+			this.R[6], this.R[3], this.R[0]
+		];
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
-		this.U[8] = temp[0];
-		this.U[7] = temp[1];
-		this.U[6] = temp[2];
-		this.L[2] = temp[3];
-		this.L[5] = temp[4];
-		this.L[8] = temp[5];
-		this.D[0] = temp[6];
-		this.D[1] = temp[7];
-		this.D[2] = temp[8];
-		this.R[6] = temp[9];
-		this.R[3] = temp[10];
-		this.R[0] = temp[11];
-		temp = [this.F[0], this.F[3], this.F[6], this.F[7], this.F[8], this.F[5], this.F[2], this.F[1]];
+		this.U[8] = temp[0]; this.U[7] = temp[1]; this.U[6] = temp[2];
+		this.L[2] = temp[3]; this.L[5] = temp[4]; this.L[8] = temp[5];
+		this.D[0] = temp[6]; this.D[1] = temp[7]; this.D[2] = temp[8];
+		this.R[6] = temp[9]; this.R[3] = temp[10]; this.R[0] = temp[11];
+
+		temp = [
+			this.F[0], this.F[3], this.F[6], this.F[7],
+			this.F[8], this.F[5], this.F[2], this.F[1]
+		];
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
-		this.F[0] = temp[0];
-		this.F[3] = temp[1];
-		this.F[6] = temp[2];
-		this.F[7] = temp[3];
-		this.F[8] = temp[4];
-		this.F[5] = temp[5];
-		this.F[2] = temp[6];
-		this.F[1] = temp[7];
-		temp = [this.B[0], this.B[1], this.B[2], this.B[3], this.B[5], this.B[6], this.B[7], this.B[8]];
+		this.F[0] = temp[0]; this.F[3] = temp[1]; this.F[6] = temp[2]; this.F[7] = temp[3];
+		this.F[8] = temp[4]; this.F[5] = temp[5]; this.F[2] = temp[6]; this.F[1] = temp[7];
+
+		temp = [
+			this.B[0], this.B[1], this.B[2], this.B[5],
+			this.B[8], this.B[7], this.B[6], this.B[3]
+		];
 		temp = this.FirstToEnd(temp);
 		temp = this.FirstToEnd(temp);
-		this.B[0] = temp[0];
-		this.B[1] = temp[1];
-		this.B[2] = temp[2];
-		this.B[3] = temp[3];
-		this.B[4] = temp[4];
-		this.B[5] = temp[5];
-		this.B[6] = temp[6];
-		this.B[7] = temp[7];
-		this.B[8] = temp[8];
+		this.B[0] = temp[0]; this.B[1] = temp[1]; this.B[2] = temp[2]; this.B[5] = temp[3];
+		this.B[8] = temp[4]; this.B[7] = temp[5]; this.B[6] = temp[6]; this.B[3] = temp[7];
 	}
 
 	FirstToEnd(array) {
