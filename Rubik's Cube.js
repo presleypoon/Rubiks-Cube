@@ -139,7 +139,7 @@ class faces {
 	Move(moves) {
 		if (moves.length === 0) return;
 		for (let i = 0; i < moves.length; i++) {
-			Turn(moves[i], i);
+			this.Turn(moves[i], i);
 			if (moves.length == 7) {
 				console.log("Breakpoint here");
 			}
@@ -148,49 +148,49 @@ class faces {
 
 	Turn(move, IdForError) {
 		if (move.includes("'")) {
-			Move([move[0], move[0], move[0]]);
+			this.Move([move[0], move[0], move[0]]);
 		} else if (move.includes("2")) {
-			Move([move[0], move[0]]);
+			this.Move([move[0], move[0]]);
 		} else if (move === "F") {
-			TurnF();
+			this.TurnF();
 		} else if (move === "U") {
-			TurnU();
+			this.TurnU();
 		} else if (move === "x") {
-			TurnX();
+			this.TurnX();
 		} else if (move === "y") {
-			TurnY();
+			this.TurnY();
 		} else if (move === "z") {
-			TurnZ();
+			this.TurnZ();
 		} else if (move === "R") {
-			Move(["y", "F", "y'"]);
+			this.Move(["y", "F", "y'"]);
 		} else if (move === "L") {
-			Move(["y'", "F", "y"]);
+			this.Move(["y'", "F", "y"]);
 		} else if (move === "D") {
-			Move(["x", "F", "x'"]);
+			this.Move(["x", "F", "x'"]);
 		} else if (move === "B") {
-			Move(["x'", "U", "x"]);
+			this.Move(["x'", "U", "x"]);
 		} else if (move === "M") {
-			Move(["x'", "R", "L'"]);
+			this.Move(["x'", "R", "L'"]);
 		} else if (move === "E") {
-			Move(["y'", "U", "D'"]);
+			this.Move(["y'", "U", "D'"]);
 		} else if (move === "S") {
-			Move(["z'", "F", "B'"]);
+			this.Move(["z'", "F", "B'"]);
 		} else if (move === "f") {
-			Move(["z", "B'"]);
+			this.Move(["z", "B'"]);
 		} else if (move === "u") {
-			Move(["y", "D'"]);
+			this.Move(["y", "D'"]);
 		} else if (move === "d") {
-			Move(["y'", "U'"]);
+			this.Move(["y'", "U'"]);
 		} else if (move === "b") {
-			Move(["z'", "F'"]);
+			this.Move(["z'", "F'"]);
 		} else if (move === "r") {
-			Move(["x", "L'"]);
+			this.Move(["x", "L'"]);
 		} else if (move === "l") {
-			Move(["x'", "R'"]);
+			this.Move(["x'", "R'"]);
 		} else {
 			throw new Error(`Move '${move}' at index ${IdForError} not a valid move`);
 		}
-		DrawCube();
+		this.DrawCube();
 	}
 
 	TurnF() {
