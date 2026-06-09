@@ -151,46 +151,81 @@ class faces {
 			this.Move([move[0], move[0], move[0]]);
 		} else if (move.includes("2")) {
 			this.Move([move[0], move[0]]);
-		} else if (move === "F") {
-			this.TurnF();
-		} else if (move === "U") {
-			this.TurnU();
-		} else if (move === "x") {
-			this.TurnX();
-		} else if (move === "y") {
-			this.TurnY();
-		} else if (move === "z") {
-			this.TurnZ();
-		} else if (move === "R") {
-			this.Move(["y", "F", "y'"]);
-		} else if (move === "L") {
-			this.Move(["y'", "F", "y"]);
-		} else if (move === "D") {
-			this.Move(["x", "F", "x'"]);
-		} else if (move === "B") {
-			this.Move(["x'", "U", "x"]);
-		} else if (move === "M") {
-			this.Move(["x'", "R", "L'"]);
-		} else if (move === "E") {
-			this.Move(["y'", "U", "D'"]);
-		} else if (move === "S") {
-			this.Move(["z'", "F", "B'"]);
-		} else if (move === "f") {
-			this.Move(["z", "B'"]);
-		} else if (move === "u") {
-			this.Move(["y", "D'"]);
-		} else if (move === "d") {
-			this.Move(["y'", "U'"]);
-		} else if (move === "b") {
-			this.Move(["z'", "F'"]);
-		} else if (move === "r") {
-			this.Move(["x", "L'"]);
-		} else if (move === "l") {
-			this.Move(["x'", "R'"]);
 		} else {
-			throw new Error(`Move '${move}' at index ${IdForError} not a valid move`);
+			switch (move) {
+				case "F": {
+					this.TurnF();
+					break;
+				}
+				case "U": {
+					this.TurnU();
+					break;
+				}
+				case "x": {
+					this.TurnX();
+					break;
+				}
+				case "y": {
+					this.TurnY();
+					break;
+				}
+				case "z": {
+					this.TurnZ();
+					break;
+				}
+				case "R": {
+					this.Move(["y", "F", "y'"]);
+					break;
+				}
+				case "L": {
+					this.Move(["y'", "F", "y"]);
+					break;
+				}
+				case "D": {
+					this.Move(["y'", "F", "y"]);
+					break;
+				}
+				case "M": {
+					this.Move(["x'", "R", "L'"]);
+					break;
+				}
+				case "E": {
+					this.Move(["y'", "U", "D'"]);
+					break;
+				}
+				case "S": {
+					this.Move(["z'", "F", "B'"]);
+					break;
+				}
+				case "f": {
+					this.Move(["z", "B'"]);
+					break;
+				}
+				case "u": {
+					this.Move(["y", "D'"]);
+					break;
+				}
+				case "d": {
+					this.Move(["y'", "U'"]);
+					break;
+				}
+				case "b": {
+					this.Move(["z'", "F'"]);
+					break;
+				}
+				case "r": {
+					this.Move(["x", "L'"]);
+					break;
+				}
+				case "l": {
+					this.Move(["x'", "R'"]);
+					break;
+				}
+				default: {
+					throw new Error(`Move '${move} at index ${IdForError} not a valid move`);
+				}
+			}
 		}
-		this.DrawCube();
 	}
 
 	TurnF() {
