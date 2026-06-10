@@ -6,3 +6,8 @@ body {
 canvas {
 	border: 1px solid #000;
 }
+
+button{
+	width: calc(80vw/6);
+	height: calc(15vh/6);
+}

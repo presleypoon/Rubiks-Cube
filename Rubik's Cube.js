@@ -1,6 +1,6 @@
 const c = document.getElementById("Rubik's Cube");
-c.width = window.innerWidth * 0.95;
-c.height = window.innerHeight * 0.95;
+c.width = window.innerWidth * 0.8;
+c.height = window.innerHeight * 0.8;
 const ctx = c.getContext("2d");
 const height = c.height;
 const width = c.width;
@@ -192,63 +192,111 @@ class faces {
 					break;
 				}
 				case "D": {
-					this.TurnY();
-					this.TurnY();
-					this.TurnY();
+					this.TurnX();
 					this.TurnF();
-					this.TurnY();
+					this.TurnX();
+					this.TurnX();
+					this.TurnX();
 					break;
 				}
 				case "M": {
 					this.TurnX();
 					this.TurnX();
 					this.TurnX();
-					this.TurnR();
+					this.TurnY();
+					this.TurnF();
+					this.TurnY();
+					this.TurnY();
+					this.TurnF();
+					this.TurnF();
+					this.TurnF();
+					this.TurnY();
 					break;
 				}
 				case "E": {
 					this.TurnY();
-					this.TurnY();
-					this.TurnY();
 					this.TurnU();
-					this.TurnY();
-					this.TurnY();
-					this.TurnY();
+					this.TurnU();
+					this.TurnU();
+					this.TurnX();
 					this.TurnF();
-					this.TurnF();
-					this.TurnF();
-					this.TurnY();
+					this.TurnX();
+					this.TurnX();
+					this.TurnX();
 					break;
 				}
 				case "S": {
-					this.Move(["z'", "F", "B'"]);
+					this.TurnZ();
+					this.TurnZ();
 					this.TurnZ();
 					this.TurnF();
-
+					this.TurnX();
+					this.TurnX();
+					this.TurnX();
+					this.TurnU();
+					this.TurnU();
+					this.TurnU();
+					this.TurnX();
 					break;
 				}
 				case "f": {
-					this.Move(["z", "B'"]);
+					this.TurnZ();
+					this.TurnX();
+					this.TurnX();
+					this.TurnX();
+					this.TurnU();
+					this.TurnU();
+					this.TurnU();
+					this.TurnX();
 					break;
 				}
 				case "u": {
-					this.Move(["y", "D'"]);
+					this.TurnF();
+					this.TurnF();
+					this.TurnF();
+					this.TurnY();
 					break;
 				}
 				case "d": {
-					this.Move(["y'", "U'"]);
+					this.TurnY();
+					this.TurnY();
+					this.TurnY();
+					this.TurnU();
+					this.TurnU();
+					this.TurnU();
 					break;
 				}
 				case "b": {
-					this.Move(["z'", "F'"]);
+					this.TurnZ();
+					this.TurnZ();
+					this.TurnZ();
+					this.TurnF();
+					this.TurnF();
+					this.TurnF();
 					break;
 				}
 				case "r": {
-					this.Move(["x", "L'"]);
+					this.TurnX();
+					this.TurnY();
+					this.TurnY();
+					this.TurnY();
+					this.TurnF();
+					this.TurnF();
+					this.TurnF();
+					this.TurnY();
 					break;
 				}
 				case "l": {
-					this.Move(["x'", "R'"]);
+					this.TurnX();
+					this.TurnX();
+					this.TurnX();
+					this.TurnY();
+					this.TurnF();
+					this.TurnF();
+					this.TurnF();
+					this.TurnY();
+					this.TurnY();
+					this.TurnY();
 					break;
 				}
 				default: {
@@ -256,6 +304,7 @@ class faces {
 				}
 			}
 		}
+		this.DrawCube();
 	}
 
 	TurnF() {
