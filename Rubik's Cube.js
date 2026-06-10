@@ -148,7 +148,7 @@ class faces {
 		}
 	}
 
-	Turn(move, IdForError) {
+	Turn(move, IdForError = -1) {
 		if (move.includes("'")) {
 			this.Move([move[0], move[0], move[0]]);
 		} else if (move.includes("2")) {
@@ -191,6 +191,14 @@ class faces {
 					this.TurnY();
 					break;
 				}
+				case "B": {
+					this.TurnX();
+					this.TurnX();
+					this.TurnF();
+					this.TurnX();
+					this.TurnX();
+					break;
+				 }
 				case "D": {
 					this.TurnX();
 					this.TurnF();
