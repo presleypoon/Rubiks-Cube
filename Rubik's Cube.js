@@ -151,10 +151,15 @@ try {
 
 		Turn(move, IdForError = -1) {
 			if (move.includes("'")) {
-				this.Move([move[0], move[0], move[0]]);
-			} else if (move.includes("2")) {
-				this.Move([move[0], move[0]]);
-			} else {
+				this.Turn(move[0], IdForError);
+				this.Turn(move[0], IdForError);
+				this.Turn(move[0], IdForError);
+			}
+			else if (move.includes("2")) {
+				this.Turn(move[0], IdForError);
+				this.Turn(move[0], IdForError);
+			}
+			else {
 				switch (move) {
 					case "F": {
 						this.TurnF();
