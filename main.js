@@ -135,7 +135,6 @@ class faces {
   }
 
   Move(moves) {
-    if (moves.length === 0) return;
     for (let i = 0; i < moves.length; i++) {
       this.Turn(moves[i], i);
     }
@@ -950,9 +949,86 @@ class faces {
   }
 }
 
-function Submit() {}
+function Submit() {
+  let MoveArray = Input.value.split(" ");
+
+  while (true) {
+    const temp = MoveArray.indexOf("");
+    if (temp === -1) break;
+    MoveArray.splice(temp, 1);
+  }
+  const Approved = [
+    "F",
+    "U",
+    "R",
+    "L",
+    "B",
+    "D",
+    "x",
+    "y",
+    "z",
+    "M",
+    "E",
+    "S",
+    "f",
+    "u",
+    "d",
+    "b",
+    "r",
+    "l",
+    "F'",
+    "U'",
+    "R'",
+    "L'",
+    "B'",
+    "D'",
+    "x'",
+    "y'",
+    "z'",
+    "M'",
+    "E'",
+    "S'",
+    "f'",
+    "u'",
+    "d'",
+    "b'",
+    "r'",
+    "l'",
+    "F2",
+    "U2",
+    "R2",
+    "L2",
+    "B2",
+    "D2",
+    "x2",
+    "y2",
+    "z2",
+    "M2",
+    "E2",
+    "S2",
+    "f2",
+    "u2",
+    "d2",
+    "b2",
+    "r2",
+    "l2",
+  ];
+
+  for (let i = 0; i < MoveArray.length; i++) {
+    if (!Approved.includes(MoveArray[i])) {
+      throw new Error(
+        `Invalid syntax at index ${i} with the move '${MoveArray[i]}'`,
+      );
+    }
+  }
+  
+  Faces.Move(MoveArray);
+}
 
 const c = document.getElementById("Rubik's Cube");
+const Input = document.getElementById("Input");
+const Move = document.getElementsByClassName("Move");
+const SubmitBtn = document.getElementsByClassName("Submit");
 c.width = window.innerWidth * 0.5;
 c.height = window.innerHeight * 0.8;
 const ctx = c.getContext("2d");
@@ -976,10 +1052,6 @@ QuadCoord.GetQuad();
 Faces.ResetCube();
 
 window.onerror = (message, source, lineno, colno, error) => {
-  const Input = document.getElementById("Input");
-  const Move = document.getElementsByClassName("Move");
-  const Submit = document.getElementsByClassName("Submit");
-
   if (Input) {
     Input.value = `Runtime Error: ${message}\nLine: ${lineno}, Col: ${colno}\n${error ? error.stack : ""}`;
     Input.readOnly = true;
@@ -987,7 +1059,7 @@ window.onerror = (message, source, lineno, colno, error) => {
   }
 
   for (let i = 0; i < Move.length; i++) Move[i].disabled = true;
-  for (let i = 0; i < Submit.length; i++) Submit[i].disabled = true;
+  SubmitBtn[0].disabled = true;
 
   return true;
 };

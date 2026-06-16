@@ -8,7 +8,7 @@ canvas {
 }
 
 .Move {
-	width: calc(49vw/6);
+	width: calc(48vw/6);
 	height: calc(15vh/6);
 }
 
