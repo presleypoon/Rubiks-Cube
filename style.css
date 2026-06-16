@@ -1,0 +1,35 @@
+html,
+body {
+	height: 100%;
+}
+
+canvas {
+	border: 1px solid #000;
+}
+
+.Move {
+	width: calc(49vw/6);
+	height: calc(15vh/6);
+}
+
+div.Main {
+	display: flex;
+	flex-direction: row;
+}
+
+div.Vert {
+	display: flex;
+	flex-direction: column;
+}
+
+textarea {
+	resize: none;
+	height: calc(100vh * 0.8);
+	width: calc(100vh);
+}
+
+.Submit {
+	width: calc(49vw*0.95);
+		height: calc(15vh);
+}
+

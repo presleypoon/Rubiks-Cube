@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Rubik's Cube</title>
+	<link rel="stylesheet" href="Rubik's Cube.css">
+</head>
+
+<body>
+	<div class="Main">
+		<div class="Vert">
+			<canvas id="Rubik's Cube"></canvas>
+			<div>
+				<button onclick="Faces.Turn(`U`)" class="Move">U</button>
+				<button onclick="Faces.Turn(`D`)" class="Move">D</button>
+				<button onclick="Faces.Turn(`R`)" class="Move">R</button>
+				<button onclick="Faces.Turn(`L`)" class="Move">L</button>
+				<button onclick="Faces.Turn(`F`)" class="Move">F</button>
+				<button onclick="Faces.Turn(`B`)" class="Move">B</button>
+				<br>
+				<button onclick="Faces.Turn(`U'`)" class="Move">U'</button>
+				<button onclick="Faces.Turn(`D'`)" class="Move">D'</button>
+				<button onclick="Faces.Turn(`R'`)" class="Move">R'</button>
+				<button onclick="Faces.Turn(`L'`)" class="Move">L'</button>
+				<button onclick="Faces.Turn(`F'`)" class="Move">F'</button>
+				<button onclick="Faces.Turn(`B'`)" class="Move">B'</button>
+				<br>
+				<button onclick="Faces.Turn(`U2`)" class="Move">U2</button>
+				<button onclick="Faces.Turn(`D2`)" class="Move">D2</button>
+				<button onclick="Faces.Turn(`R2`)" class="Move">R2</button>
+				<button onclick="Faces.Turn(`L2`)" class="Move">L2</button>
+				<button onclick="Faces.Turn(`F2`)" class="Move">F2</button>
+				<button onclick="Faces.Turn(`B2`)" class="Move">B2</button>
+				<br>
+				<button onclick="Faces.Turn(`x`)" class="Move">x</button>
+				<button onclick="Faces.Turn(`y`)" class="Move">y</button>
+				<button onclick="Faces.Turn(`z`)" class="Move">z</button>
+				<button onclick="Faces.Turn(`x'`)" class="Move">x'</button>
+				<button onclick="Faces.Turn(`y'`)" class="Move">y'</button>
+				<button onclick="Faces.Turn(`z'`)" class="Move">z'</button>
+				<br>
+				<button onclick="Faces.Turn(`x2`)" class="Move">x2</button>
+				<button onclick="Faces.Turn(`y2`)" class="Move">y2</button>
+				<button onclick="Faces.Turn(`z2`)" class="Move">z2</button>
+				<button onclick="Faces.Turn(`M`)" class="Move">M</button>
+				<button onclick="Faces.Turn(`E`)" class="Move">E</button>
+				<button onclick="Faces.Turn(`S`)" class="Move">S</button>
+				<br>
+				<button onclick="Faces.Turn(`M'`)" class="Move">M'</button>
+				<button onclick="Faces.Turn(`E'`)" class="Move">E'</button>
+				<button onclick="Faces.Turn(`S'`)" class="Move">S'</button>
+				<button onclick="Faces.Turn(`M2`)" class="Move">M2</button>
+				<button onclick="Faces.Turn(`E2`)" class="Move">E2</button>
+				<button onclick="Faces.Turn(`S2`)" class="Move">S2</button>
+			</div>
+		</div>
+		<div class="Vert">
+			<textarea id="Input" placeholder="Enter here the formula for the algorithm that you want to run"></textarea>
+			<button onclick="Submit();" class="Submit">Subit</button>
+		</div>
+	</div>
+	<script src="Rubik's Cube.js"></script>
+</body>
+
+</html>
