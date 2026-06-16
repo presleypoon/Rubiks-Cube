@@ -135,9 +135,7 @@ class faces {
   }
 
   Move(moves) {
-    for (let i = 0; i < moves.length; i++) {
-      this.Turn(moves[i], i);
-    }
+    for (let i = 0; i < moves.length; i++) this.Turn(moves[i], i);
   }
 
   Turn(move, IdForError = -1) {
@@ -145,171 +143,175 @@ class faces {
       this.Turn(move[0], IdForError);
       this.Turn(move[0], IdForError);
       this.Turn(move[0], IdForError);
+      this.DrawCube();
+      return;
     } else if (move.includes("2")) {
       this.Turn(move[0], IdForError);
       this.Turn(move[0], IdForError);
-    } else {
-      switch (move) {
-        case "F": {
-          this.TurnF();
-          break;
-        }
-        case "U": {
-          this.TurnU();
-          break;
-        }
-        case "x": {
-          this.TurnX();
-          break;
-        }
-        case "y": {
-          this.TurnY();
-          break;
-        }
-        case "z": {
-          this.TurnZ();
-          break;
-        }
-        case "R": {
-          this.TurnY();
-          this.TurnF();
-          this.TurnY();
-          this.TurnY();
-          this.TurnY();
-          break;
-        }
-        case "L": {
-          this.TurnY();
-          this.TurnY();
-          this.TurnY();
-          this.TurnF();
-          this.TurnY();
-          break;
-        }
-        case "B": {
-          this.TurnX();
-          this.TurnX();
-          this.TurnF();
-          this.TurnX();
-          this.TurnX();
-          break;
-        }
-        case "D": {
-          this.TurnX();
-          this.TurnF();
-          this.TurnX();
-          this.TurnX();
-          this.TurnX();
-          break;
-        }
-        case "M": {
-          this.TurnX();
-          this.TurnX();
-          this.TurnX();
-          this.TurnY();
-          this.TurnF();
-          this.TurnY();
-          this.TurnY();
-          this.TurnF();
-          this.TurnF();
-          this.TurnF();
-          this.TurnY();
-          break;
-        }
-        case "E": {
-          this.TurnY();
-          this.TurnU();
-          this.TurnU();
-          this.TurnU();
-          this.TurnX();
-          this.TurnF();
-          this.TurnX();
-          this.TurnX();
-          this.TurnX();
-          break;
-        }
-        case "S": {
-          this.TurnZ();
-          this.TurnZ();
-          this.TurnZ();
-          this.TurnF();
-          this.TurnX();
-          this.TurnX();
-          this.TurnX();
-          this.TurnU();
-          this.TurnU();
-          this.TurnU();
-          this.TurnX();
-          break;
-        }
-        case "f": {
-          this.TurnZ();
-          this.TurnX();
-          this.TurnX();
-          this.TurnX();
-          this.TurnU();
-          this.TurnU();
-          this.TurnU();
-          this.TurnX();
-          break;
-        }
-        case "u": {
-          this.TurnF();
-          this.TurnF();
-          this.TurnF();
-          this.TurnY();
-          break;
-        }
-        case "d": {
-          this.TurnY();
-          this.TurnY();
-          this.TurnY();
-          this.TurnU();
-          this.TurnU();
-          this.TurnU();
-          break;
-        }
-        case "b": {
-          this.TurnZ();
-          this.TurnZ();
-          this.TurnZ();
-          this.TurnF();
-          this.TurnF();
-          this.TurnF();
-          break;
-        }
-        case "r": {
-          this.TurnX();
-          this.TurnY();
-          this.TurnY();
-          this.TurnY();
-          this.TurnF();
-          this.TurnF();
-          this.TurnF();
-          this.TurnY();
-          break;
-        }
-        case "l": {
-          this.TurnX();
-          this.TurnX();
-          this.TurnX();
-          this.TurnY();
-          this.TurnF();
-          this.TurnF();
-          this.TurnF();
-          this.TurnY();
-          this.TurnY();
-          this.TurnY();
-          break;
-        }
-        default: {
-          throw new Error(
-            `Move '${move} at index ${IdForError} not a valid move`,
-          );
-        }
+      this.DrawCube();
+      return;
+    }
+
+    switch (move) {
+      case "F": {
+        this.TurnF();
+        break;
+      }
+      case "U": {
+        this.TurnU();
+        break;
+      }
+      case "x": {
+        this.TurnX();
+        break;
+      }
+      case "y": {
+        this.TurnY();
+        break;
+      }
+      case "z": {
+        this.TurnZ();
+        break;
+      }
+      case "R": {
+        this.TurnY();
+        this.TurnF();
+        this.TurnY();
+        this.TurnY();
+        this.TurnY();
+        break;
+      }
+      case "L": {
+        this.TurnY();
+        this.TurnY();
+        this.TurnY();
+        this.TurnF();
+        this.TurnY();
+        break;
+      }
+      case "B": {
+        this.TurnX();
+        this.TurnX();
+        this.TurnF();
+        this.TurnX();
+        this.TurnX();
+        break;
+      }
+      case "D": {
+        this.TurnX();
+        this.TurnF();
+        this.TurnX();
+        this.TurnX();
+        this.TurnX();
+        break;
+      }
+      case "M": {
+        this.TurnX();
+        this.TurnX();
+        this.TurnX();
+        this.TurnY();
+        this.TurnF();
+        this.TurnY();
+        this.TurnY();
+        this.TurnF();
+        this.TurnF();
+        this.TurnF();
+        this.TurnY();
+        break;
+      }
+      case "E": {
+        this.TurnY();
+        this.TurnU();
+        this.TurnU();
+        this.TurnU();
+        this.TurnX();
+        this.TurnF();
+        this.TurnX();
+        this.TurnX();
+        this.TurnX();
+        break;
+      }
+      case "S": {
+        this.TurnZ();
+        this.TurnZ();
+        this.TurnZ();
+        this.TurnF();
+        this.TurnX();
+        this.TurnX();
+        this.TurnX();
+        this.TurnU();
+        this.TurnU();
+        this.TurnU();
+        this.TurnX();
+        break;
+      }
+      case "f": {
+        this.TurnZ();
+        this.TurnX();
+        this.TurnX();
+        this.TurnX();
+        this.TurnU();
+        this.TurnU();
+        this.TurnU();
+        this.TurnX();
+        break;
+      }
+      case "u": {
+        this.TurnF();
+        this.TurnF();
+        this.TurnF();
+        this.TurnY();
+        break;
+      }
+      case "d": {
+        this.TurnY();
+        this.TurnY();
+        this.TurnY();
+        this.TurnU();
+        this.TurnU();
+        this.TurnU();
+        break;
+      }
+      case "b": {
+        this.TurnZ();
+        this.TurnZ();
+        this.TurnZ();
+        this.TurnF();
+        this.TurnF();
+        this.TurnF();
+        break;
+      }
+      case "r": {
+        this.TurnX();
+        this.TurnY();
+        this.TurnY();
+        this.TurnY();
+        this.TurnF();
+        this.TurnF();
+        this.TurnF();
+        this.TurnY();
+        break;
+      }
+      case "l": {
+        this.TurnX();
+        this.TurnX();
+        this.TurnX();
+        this.TurnY();
+        this.TurnF();
+        this.TurnF();
+        this.TurnF();
+        this.TurnY();
+        this.TurnY();
+        this.TurnY();
+        break;
+      }
+      default: {
+        throw new Error(
+          `Move '${move} at index ${IdForError} not a valid move`,
+        );
+        break;
       }
     }
-    this.DrawCube();
   }
 
   TurnF() {
@@ -1021,7 +1023,7 @@ function Submit() {
       );
     }
   }
-  
+
   Faces.Move(MoveArray);
 }
 
