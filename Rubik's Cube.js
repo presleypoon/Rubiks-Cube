@@ -5,8 +5,6 @@ class coord {
 	}
 }
 
-let colour = [];
-
 class quadCoord {
 	constructor() {
 		this.x1 = [];
@@ -640,6 +638,7 @@ try {
 	const Faces = new Faces;
 
 	let dev = false;
+	let colour = [];
 
 	ctx.translate(width / 2, height / 2 * 1.25);
 	ctx.fillStyle = "#fff";

@@ -1,2 +1,3 @@
 # Rubik's Cube Simulator
-Still in development
+
+IT IS DONE!!!
