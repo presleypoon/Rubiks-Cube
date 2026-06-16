@@ -881,11 +881,11 @@ class faces {
         case "b": {
           colour.push("blue");
           break;
-				}
-				case "r": {
-					colour.push("red");
-					break;
-				}
+        }
+        case "r": {
+          colour.push("red");
+          break;
+        }
         case "y": {
           colour.push("yellow");
           break;
@@ -950,9 +950,7 @@ class faces {
   }
 }
 
-function Submit() {
-	
-}
+function Submit() {}
 
 const c = document.getElementById("Rubik's Cube");
 c.width = window.innerWidth * 0.5;
@@ -969,22 +967,27 @@ const Faces = new faces();
 let dev = false;
 let colour = [];
 
-try {
-  ctx.translate(width / 2, (height / 2) * 1.25);
-  ctx.fillStyle = "#fff";
-  ctx.strokeStyle = "#000";
+ctx.translate(width / 2, (height / 2) * 1.25);
+ctx.fillStyle = "#fff";
+ctx.strokeStyle = "#000";
 
-  QuadCoord.GetXY1To4();
-  QuadCoord.GetQuad();
-  Faces.ResetCube();
-} catch (error) {
+QuadCoord.GetXY1To4();
+QuadCoord.GetQuad();
+Faces.ResetCube();
+
+window.onerror = (message, source, lineno, colno, error) => {
   const Input = document.getElementById("Input");
   const Move = document.getElementsByClassName("Move");
   const Submit = document.getElementsByClassName("Submit");
-  Input.value = `Error: ${error.message}
-${error.stack}`;
-  Input.readOnly = true;
-  Input.style.color = "#ff0000";
+
+  if (Input) {
+    Input.value = `Runtime Error: ${message}\nLine: ${lineno}, Col: ${colno}\n${error ? error.stack : ""}`;
+    Input.readOnly = true;
+    Input.style.color = "#ff0000";
+  }
+
   for (let i = 0; i < Move.length; i++) Move[i].disabled = true;
-  for (let i = 0; i < Submit.length; i++) Submit.disabled = true;
-}
+  for (let i = 0; i < Submit.length; i++) Submit[i].disabled = true;
+
+  return true;
+};
