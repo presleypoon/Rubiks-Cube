@@ -952,72 +952,11 @@ class faces {
 }
 
 function Submit() {
-  let MoveArray = Input.value.split(" ");
-
-  while (true) {
-    const temp = MoveArray.indexOf("");
-    if (temp === -1) break;
-    MoveArray.splice(temp, 1);
-  }
-  const Approved = [
-    "F",
-    "U",
-    "R",
-    "L",
-    "B",
-    "D",
-    "x",
-    "y",
-    "z",
-    "M",
-    "E",
-    "S",
-    "f",
-    "u",
-    "d",
-    "b",
-    "r",
-    "l",
-    "F'",
-    "U'",
-    "R'",
-    "L'",
-    "B'",
-    "D'",
-    "x'",
-    "y'",
-    "z'",
-    "M'",
-    "E'",
-    "S'",
-    "f'",
-    "u'",
-    "d'",
-    "b'",
-    "r'",
-    "l'",
-    "F2",
-    "U2",
-    "R2",
-    "L2",
-    "B2",
-    "D2",
-    "x2",
-    "y2",
-    "z2",
-    "M2",
-    "E2",
-    "S2",
-    "f2",
-    "u2",
-    "d2",
-    "b2",
-    "r2",
-    "l2",
-  ];
+  let MoveArray = Input.value.split(" ").filter((move) => move !== "");
+  const AllowMoves = /^[FBLRUDxyzMESfblrud]['2']?$/;
 
   for (let i = 0; i < MoveArray.length; i++) {
-    if (!Approved.includes(MoveArray[i])) {
+    if (!AllowMoves.test(MoveArray[i])) {
       throw new Error(
         `Invalid syntax at index ${i} with the move '${MoveArray[i]}'`,
       );
