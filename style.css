@@ -1,15 +1,16 @@
 html,
 body {
 	height: 100%;
+	background-color: #000;
 }
 
 canvas {
-	border: 1px solid #000;
+	border: 1px solid #fff;
 }
 
 .Move {
-	width: calc(48vw/6);
-	height: calc(15vh/6);
+	width: calc(48vw / 6);
+	height: calc(15vh / 6);
 }
 
 div.Main {
@@ -23,13 +24,20 @@ div.Vert {
 }
 
 textarea {
+	background-color: #000;
+	border-color: #fff;
 	resize: none;
 	height: calc(100vh * 0.8);
 	width: calc(100vh);
 }
 
 .Submit {
-	width: calc(49vw*0.95);
-		height: calc(15vh);
+	width: calc(49vw * 0.95);
+	height: calc(15vh);
 }
 
+button {
+	background-color: #000;
+	border-color: #fff;
+	color: #fff;
+}
